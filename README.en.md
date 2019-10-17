@@ -1,36 +1,56 @@
 # open-tacomall-uniapp
 
-#### Description
+#### 介绍
 基于uniapp开发的适用于微信小程序，头条小程序，支付宝小程序，H5端的商城。
 
-#### Software Architecture
-Software architecture description
+#### 软件架构
 
-#### Installation
+~~~
+open-tacomall-uniapp    根目录
+├─api                   与服务端对接
+├─common                项目公共目录，包括未编译之前的less,es6文件
+├─compoents             被页面公用的组件
+├─hybrid                混合页面，适用于编译成navtive app时嵌入的HTML网页
+├─libs                  js库，例如http请求库
+├─pages                 页面
+├─platforms             适用于编译不同平台的兼容代码
+├─plugins               Vue的插件库
+├─service               平台提供的服务，例如微信登陆服务
+├─static                静态目录，严禁将未编译的静态资源放入该目录
+├─store                 vuex状态管理
+├─utils                 js方法库
+├─App.vue               App启动
+├─config.js             App配置文件
+├─main.js               App编译入口
+├─manifest.json         App项目配置文件
+├─page.json             App页面配置
+~~~
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
-#### Instructions
+#### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  克隆项目
+2.  安装hbuilderx
+3.  导入项目
+4.  编译运行
 
-#### Contribution
+#### 使用说明
 
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+1.  项目应许进行商用
+
+#### 参与贡献
+
+1.  Fork 本仓库
+2.  新建 Feat_xxx 分支
+3.  提交代码
+4.  新建 Pull Request
 
 
-#### Gitee Feature
+#### 码云特技
 
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
+2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
+3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
+4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
+5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
+6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
