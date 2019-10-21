@@ -8,19 +8,19 @@
 
 **登录:**
 
-<img src='https://kyeteo.cn/image/tacomall-login.jpg' height='500px'>
+<img src='https://cdn.kyeteo.cn/tacomall/login.jpg' height='500px'>
 
 **个人中心:**
 
-<img src='https://kyeteo.cn/image/tacomall-center.jpg' height='500px'>
+<img src='https://cdn.kyeteo.cn/tacomall/center.jpg' height='500px'>
 
 **购物车:**
 
-<img src='https://kyeteo.cn/image/tacomall-cart.jpg' height='500px'>
+<img src='https://cdn.kyeteo.cn/tacomall/cart.jpg' height='500px'>
 
 **详情:**
 
-<img src='https://kyeteo.cn/image/tacomall-goods.jpg' height='500px'>
+<img src='https://cdn.kyeteo.cn/tacomall/goods.jpg' height='500px'>
 
 #### 软件架构
 
