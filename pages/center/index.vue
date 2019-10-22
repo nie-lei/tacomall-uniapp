@@ -5,7 +5,7 @@
                 <text class="iconfont">&#xe674;</text>
             </view>
         </view>
-        <view class="c-account" @tap="nav('/pages/login/index')">
+        <view class="c-account" @tap="nav('/pages/account/index')">
             <view class="a-left">
                 <view class="l-avatar">
                     <img src="https://m.mi.com/static/img/avatar.76a75b8f17.png" alt="">

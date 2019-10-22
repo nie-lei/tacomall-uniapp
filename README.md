@@ -1,7 +1,27 @@
 # open-tacomall-uniapp
 
-#### 介绍
+#### 关于open-tacomall-uniapp
 基于uniapp开发的适用于微信小程序，头条小程序，支付宝小程序，H5端的商城。
+
+
+#### 关于open-tacomall
+open-tacomall，正如墨西哥taco一样，让商城代码在开发者手中充满异域风味。同时致力于打造一个全面，可商用的，同时赋能社交流量推广的平台商城（将接入微信，今日头条，抖音等热门平台），open-tacomall包含如下主要模块：
+
+**open-tacomall-uniapp**
+
+基于uniapp开发的适用于微信小程序，头条小程序，支付宝小程序，H5端的商城。
+
+**open-tacomall-ssm（未开源）**
+
+基于springboot开发的java ssm商城后台。
+
+**open-tacomall-admin（未开源）**
+
+基于vuejs开发的前后分离商城管理后台。
+
+**open-tacomall-sql（未开源）**
+
+mysql文件
 
 
 #### APP预览
@@ -55,7 +75,8 @@ open-tacomall-uniapp    根目录
 
 #### 使用说明
 
-1.  项目应许进行商用
+1.  项目允许进行商用
+2.  项目使用iconfont图标，如需针对图标库进行修改，请私信获取iconfont
 
 #### 参与贡献
 
