@@ -16,6 +16,13 @@ Vue.mixin({
             uni.navigateBack({
                 delta: 1
             })
+        },
+        toast (s) {
+            uni.showToast({
+                title: s,
+                icon: 'none',
+                duration: 2000
+            })
         }
     }
 })

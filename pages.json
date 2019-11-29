@@ -98,6 +98,15 @@
 					"titleNView": false
 				}
 			}
+		},
+		{
+			"path": "pages/h5/index",
+			"style": {
+				"navigationBarTitleText": "第三方应用",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
 		}
 	],
 	"globalStyle": {

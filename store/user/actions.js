@@ -29,7 +29,6 @@ export const actions = {
         })
     },
     synopsis: ({commit}) => {
-        commit(types.SET_IS_LOGIN, true)
         api.user.synopsis().then(resp => {
             if (resp.ok) {
                 commit(types.SET_SYNOPSIS, resp.data)
@@ -37,7 +36,6 @@ export const actions = {
         })
     },
     exit: ({commit}) => {
-        commit(types.SET_IS_LOGIN, false)
         commit(types.SET_SYNOPSIS, {})
         uni.showToast({
             icon: 'success',

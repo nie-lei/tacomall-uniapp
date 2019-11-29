@@ -1,3 +1,4 @@
+@import "../../common/less/theme";
 .login{
     background: white;
     .l-wrap{
@@ -14,6 +15,7 @@
         .w-form{
             .f-input{
                 .i-item{
+                    position: relative;
                     display: flex;
                     align-items: center;
                     height: 80rpx;
@@ -25,6 +27,24 @@
                         outline: none;
                         background: #f7f7f7;
                     }
+                    .btn{
+                        position: absolute;
+                        top:50%;
+                        right:30rpx;
+                        transform: translateY(-50%);
+                        display: block;
+                        height: 60rpx;
+                        padding: 0 30rpx;
+                        line-height: 60rpx;
+                        border-radius: 10rpx;
+	                    background: @primary-color;
+                        color:white;
+	                    z-index: 10;
+	                    &-disable{
+		                    background: #f7f7f7;
+		                    color:@primary-color;
+	                    }
+                    }
                     &:not(:first-child){
                         margin-top: 20rpx;
                     }
@@ -35,8 +55,8 @@
                 align-items: center;
                 justify-content: center;
                 height: 80rpx;
-                margin-top: 20rpx;
-                background: #007fff;
+                margin-top: 40rpx;
+                background: @primary-color;
                 text{
                     color:white;
                 }
@@ -44,20 +64,13 @@
         }
         .w-service{
             display: flex;
-            justify-content: space-between;
+            align-items: center;
             padding: 20rpx 0 40rpx 0;
             font-size: 28rpx;
             color:#71777c;
-            .s-left{
-                text{
-                    &:last-child{
-                        color:#007fff;
-                    }
-                }
-            }
-            .s-right{
-                text{
-                    color:#007fff;
+            text{
+                &:last-child{
+                    color:@primary-color;
                 }
             }
         }
