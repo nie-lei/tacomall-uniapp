@@ -1,4 +1,4 @@
 export default {
     tokenKey: 'x-access-token',
-    apiUrl: 'http://localhost:1200/'
+    apiUrl: process.env.NODE_ENV === 'development' ? 'http://localhost:4000/' : ''
 }

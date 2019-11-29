@@ -1,7 +1,7 @@
 import config from '../config'
 import {token} from '../utils/token'
 
-const send = (url, data, method = 'POST', showLoading = true, base_url = '') => {
+const send = (url, data = {}, method = 'POST', showLoading = true, base_url = '') => {
     uni.showLoading({
         title: '加载中'
     })

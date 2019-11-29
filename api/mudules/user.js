@@ -1,7 +1,10 @@
-import { request } from '../../libs/request'
+import {request} from '../../libs/request'
 
 export default {
-    login: (data) => {
-        return request.post('api/user/login', data)
+    miniAppLogin: (data) => {
+        return request.post('portal/user/miniAppLogin', data)
+    },
+    synopsis: (data) => {
+        return request.post('portal/user/synopsis', data)
     }
 }

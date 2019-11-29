@@ -20,8 +20,9 @@ const store = new Vuex.Store({
         }
     },
     actions: {
-        initApp({commit}) {
+        initApp({dispatch, commit}) {
             token.get() && commit('SET_IS_LOGIN', true)
+            token.get() && dispatch('user/synopsis')
         }
     }
 })

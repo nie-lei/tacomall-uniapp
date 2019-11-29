@@ -85,6 +85,7 @@
                 justify-content: space-around;
                 padding-top: 40rpx;
                 .e-item{
+                    position: relative;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -94,6 +95,14 @@
                     background: #f7f7f7;
                     text{
                         font-size: 60rpx;
+                    }
+                    button{
+                        position: absolute;
+                        top:0;
+                        bottom:0;
+                        width:100%;
+                        opacity: 0;
+                        z-index: 10;
                     }
                 }
             }

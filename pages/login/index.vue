@@ -33,6 +33,7 @@
                     </view>
                     <view class="e-item">
                         <text class="iconfont" style="color:#07c160;">&#xe7e5;</text>
+                        <button open-type="getUserInfo" lang="zh_CN" @getuserinfo="doWeixinLogin"></button>
                     </view>
                     <view class="e-item">
                         <text class="iconfont" style="color:#007fff;">&#xe64b;</text>
@@ -45,6 +46,8 @@
 
 <script>
     import {validate} from '../../utils/validate'
+    import {token} from '../../utils/token'
+    import {mapActions} from 'vuex'
     export default {
         data () {
             return {
@@ -56,6 +59,7 @@
             }
         },
         methods: {
+            ...mapActions('user', ['synopsis']),
             sendCode () {
                 if (!this.form.mobile) {
                     this.toast('手机号必填')
@@ -75,6 +79,28 @@
                     }
                     this.time = this.time - 1
                 }, 1000)
+            },
+            doWeixinLogin (o) {
+                if (!o.detail.iv) {
+                    return
+                }
+                uni.login({
+                    provider: 'weixin',
+                    success: res => {
+                        this.$api.user.miniAppLogin({
+                            iv: o.detail.iv,
+                            code: res.code,
+                            encryptedData: o.detail.encryptedData
+                        }).then(resp => {
+                            if (resp.ok) {
+                                token.set(resp.data.token)
+                                this.synopsis()
+                            } else {
+                                this.toast('服务器出小差啦')
+                            }
+                        })
+                    }
+                })
             }
         }
     }
