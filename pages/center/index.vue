@@ -5,7 +5,19 @@
                 <text class="iconfont">&#xe674;</text>
             </view>
         </view>
-        <view class="c-account c-account-is-login" @tap="nav('/pages/account/index')" v-if="false"></view>
+        <view class="c-account c-account-is-login" @tap="nav('/pages/account/index')" v-if="isLogin">
+            <view class="a-left">
+                <view class="l-avatar">
+                    <img :src="synopsis.userProfile.avatar" alt="">
+                </view>
+                <view class="l-name">
+                    <text>{{synopsis.userProfile.nickname}}</text>
+                </view>
+            </view>
+            <view class="a-right">
+                <text class="iconfont">&#xe93d;</text>
+            </view>
+        </view>
         <view class="c-account c-account-no-login" @tap="nav('/pages/login/index')" v-else>
             <view class="a-left">
                 <view class="l-avatar">
@@ -97,7 +109,8 @@
     import {mapState} from 'vuex'
     export default {
         computed: {
-            ...mapState(['isLogin'])
+            ...mapState(['isLogin']),
+            ...mapState('user', ['synopsis'])
         }
     }
 </script>

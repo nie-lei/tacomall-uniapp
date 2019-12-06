@@ -15,8 +15,8 @@ const store = new Vuex.Store({
         isLogin: false
     },
     mutations: {
-        SET_IS_LOGIN(b) {
-            this.isLogin = b
+        SET_IS_LOGIN(state, b) {
+            state.isLogin = b
         }
     },
     actions: {

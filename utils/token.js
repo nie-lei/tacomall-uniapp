@@ -1,13 +1,13 @@
-import config from '../config'
+import {appConfig} from '../config'
 
 export const token = {
     set: (s) => {
-        uni.setStorageSync(config.tokenKey, s)
+        uni.setStorageSync(appConfig.tokenKey, s)
     },
     get: () => {
-        return uni.getStorageSync(config.tokenKey)
+        return uni.getStorageSync(appConfig.tokenKey)
     },
     clear: () => {
-        uni.removeStorageSync(config.tokenKey)
+        uni.removeStorageSync(appConfig.tokenKey)
     }
 }

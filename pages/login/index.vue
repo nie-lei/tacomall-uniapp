@@ -93,7 +93,7 @@
                             encryptedData: o.detail.encryptedData
                         }).then(resp => {
                             if (resp.ok) {
-                                token.set(resp.data.token)
+                                token.set(resp.data)
                                 this.synopsis()
                             } else {
                                 this.toast('服务器出小差啦')
