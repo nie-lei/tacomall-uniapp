@@ -13,7 +13,7 @@ tacomall，正如墨西哥taco一样，让商城代码在开发者手中充满�
 
 **tacomall-springboot**
 
-基于springboot开发的maven多模块商城后台[前往查看](https://gitee.com/running-cat/tacomall-springboot)。
+基于springboot开发的maven多模块聚合商城后台[前往查看](https://gitee.com/running-cat/tacomall-springboot)。
 
 **tacomall-admin**
 

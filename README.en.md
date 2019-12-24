@@ -1,25 +1,25 @@
-# open-tacomall-uniapp
+# tacomall-uniapp
 
-#### 关于open-tacomall-uniapp
+#### 关于tacomall-uniapp
 基于uniapp开发的适用于微信小程序，头条小程序，支付宝小程序，H5端的商城。
 
 
-#### 关于open-tacomall
-open-tacomall，正如墨西哥taco一样，让商城代码在开发者手中充满异域风味。同时致力于打造一个全面，可商用的，同时赋能社交流量推广的平台商城（将接入微信，今日头条，抖音等热门平台），open-tacomall包含如下主要模块：
+#### 关于tacomall
+tacomall，正如墨西哥taco一样，让商城代码在开发者手中充满异域风味。同时致力于打造一个全面，可商用的，同时赋能社交流量推广的平台商城（将接入微信，今日头条，抖音等热门平台），tacomall包含如下主要模块：
 
-**open-tacomall-uniapp**
+**tacomall-uniapp**
 
 基于uniapp开发的适用于微信小程序，头条小程序，支付宝小程序，H5端的商城。
 
-**open-tacomall-ssm（未开源）**
+**tacomall-springboot**
 
-基于springboot开发的java ssm商城后台。
+基于springboot开发的java maven多模块聚合商城后台。
 
-**open-tacomall-admin（未开源）**
+**tacomall-admin**
 
 基于vuejs开发的前后分离商城管理后台。
 
-**open-tacomall-sql（未开源）**
+**tacomall-sql**
 
 mysql文件
 
