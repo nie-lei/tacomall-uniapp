@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <van-transition
   show="{{ show }}"
   custom-class="van-overlay"
@@ -6,3 +7,13 @@
   bind:tap="onClick"
   catch:touchmove="noop"
 />
+=======
+<van-transition
+  show="{{ show }}"
+  custom-class="van-overlay"
+  custom-style="z-index: {{ zIndex }}; {{ mask ? 'background-color: rgba(0, 0, 0, .7);' : '' }}; {{ customStyle }}"
+  duration="{{ duration }}"
+  bind:tap="onClick"
+  catch:touchmove="noop"
+/>
+>>>>>>> b91c49eff5514b9c4f77ed2f16338bc86fcaa1e9

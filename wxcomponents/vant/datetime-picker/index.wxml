@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <van-picker
   class="van-datetime-picker"
   active-class="active-class"
@@ -14,3 +15,21 @@
   bind:confirm="onConfirm"
   bind:cancel="onCancel"
 />
+=======
+<van-picker
+  class="van-datetime-picker"
+  active-class="active-class"
+  toolbar-class="toolbar-class"
+  column-class="column-class"
+  title="{{ title }}"
+  columns="{{ columns }}"
+  item-height="{{ itemHeight }}"
+  show-toolbar="{{ showToolbar }}"
+  visible-item-count="{{ visibleItemCount }}"
+  confirm-button-text="{{ confirmButtonText }}"
+  cancel-button-text="{{ cancelButtonText }}"
+  bind:change="onChange"
+  bind:confirm="onConfirm"
+  bind:cancel="onCancel"
+/>
+>>>>>>> b91c49eff5514b9c4f77ed2f16338bc86fcaa1e9

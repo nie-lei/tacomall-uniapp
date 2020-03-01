@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var bem = require('./bem.wxs').bem;
 var memoize = require('./memoize.wxs').memoize;
 
@@ -10,3 +11,17 @@ module.exports = {
   isSrc: isSrc,
   memoize: memoize
 };
+=======
+var bem = require('./bem.wxs').bem;
+var memoize = require('./memoize.wxs').memoize;
+
+function isSrc(url) {
+  return url.indexOf('http') === 0 || url.indexOf('data:image') === 0 || url.indexOf('//') === 0;
+}
+
+module.exports = {
+  bem: memoize(bem),
+  isSrc: isSrc,
+  memoize: memoize
+};
+>>>>>>> b91c49eff5514b9c4f77ed2f16338bc86fcaa1e9

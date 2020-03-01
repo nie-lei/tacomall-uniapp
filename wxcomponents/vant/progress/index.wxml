@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <wxs src="./index.wxs" module="getters" />
 
 <view class="van-progress custom-class">
@@ -14,3 +15,21 @@
     </view>
   </view>
 </view>
+=======
+<wxs src="./index.wxs" module="getters" />
+
+<view class="van-progress custom-class">
+  <view
+    class="van-progress__portion"
+    style="width: {{ percentage }}%; background: {{ inactive ? '#cacaca' : color }}"
+  >
+    <view
+      wx:if="{{ showPivot && getters.text(pivotText, percentage) }}"
+      style="color: {{ textColor }}; background: {{ pivotColor ? pivotColor : inactive ? '#cacaca' : color }}"
+      class="van-progress__pivot"
+    >
+      {{ getters.text(pivotText, percentage) }}
+    </view>
+  </view>
+</view>
+>>>>>>> b91c49eff5514b9c4f77ed2f16338bc86fcaa1e9

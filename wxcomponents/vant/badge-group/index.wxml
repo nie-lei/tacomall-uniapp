@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 <view class="van-badge-group van-hairline--top-bottom custom-class">
   <slot />
 </view>
+=======
+<view class="van-badge-group van-hairline--top-bottom custom-class">
+  <slot />
+</view>
+>>>>>>> b91c49eff5514b9c4f77ed2f16338bc86fcaa1e9

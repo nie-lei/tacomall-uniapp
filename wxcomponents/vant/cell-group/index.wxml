@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <view
   wx:if="{{ title }}"
   class="van-cell-group__title"
@@ -7,3 +8,14 @@
 <view class="custom-class van-cell-group {{ border ? 'van-hairline--top-bottom' : '' }}">
   <slot />
 </view>
+=======
+<view
+  wx:if="{{ title }}"
+  class="van-cell-group__title"
+>
+  {{ title }}
+</view>
+<view class="custom-class van-cell-group {{ border ? 'van-hairline--top-bottom' : '' }}">
+  <slot />
+</view>
+>>>>>>> b91c49eff5514b9c4f77ed2f16338bc86fcaa1e9

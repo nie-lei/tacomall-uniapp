@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <van-cell
   center
   title="{{ title }}"
@@ -23,3 +24,30 @@
     bind:change="onChange"
   />
 </van-cell>
+=======
+<van-cell
+  center
+  title="{{ title }}"
+  label="{{ label }}"
+  border="{{ border }}"
+  icon="{{ icon }}"
+  custom-class="van-switch-cell"
+  use-label-slot="{{ useLabelSlot }}"
+>
+  <slot slot="icon" name="icon" />
+  <slot slot="title" name="title" />
+  <slot slot="label" name="label" />
+  <van-switch
+    size="{{ size }}"
+    checked="{{ checked }}"
+    loading="{{ loading }}"
+    disabled="{{ disabled }}"
+    active-color="{{ activeColor }}"
+    inactive-color="{{ inactiveColor }}"
+    active-value="{{ activeValue }}"
+    inactive-value="{{ inactiveValue }}"
+    custom-class="van-switch-cell__switch"
+    bind:change="onChange"
+  />
+</van-cell>
+>>>>>>> b91c49eff5514b9c4f77ed2f16338bc86fcaa1e9

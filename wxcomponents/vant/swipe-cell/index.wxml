@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <view
   class="van-swipe-cell"
   data-key="cell"
@@ -18,3 +19,25 @@
     </view>
   </view>
 </view>
+=======
+<view
+  class="van-swipe-cell"
+  data-key="cell"
+  catchtap="onClick"
+  bindtouchstart="startDrag"
+  catchtouchmove="{{ catchMove ? 'noop' : '' }}"
+  capture-bind:touchmove="onDrag"
+  catchtouchend="endDrag"
+  catchtouchcancel="endDrag"
+>
+  <view style="{{ wrapperStyle }}">
+    <view wx:if="{{ leftWidth }}" class="van-swipe-cell__left" data-key="left" catch:tap="onClick">
+      <slot name="left" />
+    </view>
+    <slot />
+    <view wx:if="{{ rightWidth }}" class="van-swipe-cell__right" data-key="right" catch:tap="onClick">
+      <slot name="right" />
+    </view>
+  </view>
+</view>
+>>>>>>> b91c49eff5514b9c4f77ed2f16338bc86fcaa1e9
