@@ -1,96 +1,203 @@
-# tacomall-uniapp
+<p align="center">
+	<a href="#"><img src="http://img.codingtalk.cn/B44paPc1585145412609"></a>
+</p>
+<p align="center">[power by 码上talk©]</p>
+<p align="center">
+	<a target="_blank" href="https://gitee.com/running-cat/tacomall-uniapp/blob/master/LICENSE">
+		<img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="LICENSE"/>
+	</a>
+    <a target="_blank" href="https://uniapp.dcloud.io/">
+		<img src="https://img.shields.io/badge/uniapp-master-green" alt="uniapp-master"/>
+	</a>
+     <a target="_blank" href="https://www.dcloud.io/">
+		<img src="https://img.shields.io/badge/hbuilder-release-blue" alt="hbuilder-release"/>
+	</a>
+</p>
+<p align="center">
+基于最新的uni-app开发的跨平台商城小程序（微信小程序，头条小程序，抖音小程序），合理的代码结构和规范的编码风格，能够让你很轻松的上手并转化成为自己的作品。
+与之相支持的是，我们提供了一套完整的项目代码（前端小程序，后台接口，管理后台），它让你能够用最少的时间和开发成本，来建立一套属于自己的商城系统。
+</p>
 
-#### 关于tacomall-uniapp
-基于uniapp开发的适用于微信小程序，头条小程序，支付宝小程序，H5端的商城。
+<p align="center">
+ tacomall不仅仅只是一个前端项目，你可能还需要后台接口=====>
+<a href="https://gitee.com/running-cat/tacomall-springcloud" target="_blank">后台接口（springcloud版）</a>
+<a href="https://gitee.com/running-cat/tacomall-springboot" target="_blank">后台接口（springboot版）</a>
+</p>
 
+<p align="center">
+除此之外，你希望我们有一个完整的商城开源项目=====>
+<a href="https://gitee.com/running-cat/tacomall-enterprise" target="_blank">商家管理后台</a>
+<a href="https://gitee.com/running-cat/tacomall-admin" target="_blank">平台管理后台</a>
+</p>
 
-#### 关于tacomall
-tacomall，正如墨西哥taco一样，让商城代码在开发者手中充满异域风味。同时致力于打造一个全面，可商用的，同时赋能社交流量推广的平台商城（将接入微信，今日头条，抖音等热门平台），tacomall包含如下主要模块：
+[TOC]
 
-**tacomall-uniapp**
+```
+                                                                
+                                                                
+                                                                
+ __  ___  ___      ___      ___      _   __      ___     // //  
+  / /   //   ) ) //   ) ) //   ) ) // ) )  ) ) //   ) ) // //   
+ / /   //   / / //       //   / / // / /  / / //   / / // //    
+/ /   ((___( ( ((____   ((___/ / // / /  / / ((___( ( // //     
 
-基于uniapp开发的适用于微信小程序，头条小程序，支付宝小程序，H5端的商城。
+如果你发现项目不错，不要忘记给项目点个赞👍，你的支持是我们前进的动力 :)
+```
+## 项目结构
 
-**tacomall-springboot**
+通过项目结构，你将清楚明白你即将入手的是一个怎么样的项目，你可能需要什么，如何快速的把它变成自己的产品。
+### 功能模块
 
-基于springboot开发的maven多模块聚合商城后台[前往查看](https://gitee.com/running-cat/tacomall-springboot)。
+- [x] [首    页](https://gitee.com/running-cat/tacomall-uniapp/tree/master/pages/index) 首页支持轮播展示，商品分类入口，秒杀等功能
+- [x] [商品分类](https://gitee.com/running-cat/tacomall-uniapp/tree/master/pages/category) 商品分类
+- [x] [购 物 车](https://gitee.com/running-cat/tacomall-uniapp/tree/master/pages/cart) 提供购物车操作
+- [x] [用户模块](https://gitee.com/running-cat/tacomall-uniapp/tree/master/pages/center) 包括登录用户系类功能（登录，个人中心，账户）
+- [x] [搜    索](https://gitee.com/running-cat/tacomall-uniapp/tree/master/pages/search) 商品搜索
+- [x] [商品模块](https://gitee.com/running-cat/tacomall-uniapp/tree/master/pages/goods) 商品信息展示（详情，评价，购买）
+- [x] [订单模块](https://gitee.com/running-cat/tacomall-uniapp/tree/master/pages/checkout) 订单支付流程页面
 
-**tacomall-admin**
+### 程序预览
 
-基于iview开发的前后分离商城管理后台[前往查看](https://gitee.com/running-cat/tacomall-admin)。
+以下为程序在手机端的运行预览图（取至部分功能页面）
 
-**tacomall-sql**
+<table border="0">
+    <tr>
+        <td>首页</td>
+        <td>商品分类</td>
+        <td>购物车</td>
+        <td>我的</td>
+        <td>商品详情</td>
+    </tr>
+    <tr>
+        <td><img title="码上talk" src="http://img.codingtalk.cn/ncr3m3k1585147351285" height="200" width="100"/></td>
+        <td><img title="码上talk" src="http://img.codingtalk.cn/ncr3m3k1585147351285" height="200" width="100"/></td>
+        <td><img title="码上talk" src="http://img.codingtalk.cn/ncr3m3k1585147351285" height="200" width="100"/></td>
+        <td><img title="码上talk" src="http://img.codingtalk.cn/ncr3m3k1585147351285" height="200" width="100"/></td>
+        <td><img title="码上talk" src="http://img.codingtalk.cn/ncr3m3k1585147351285" height="200" width="100"/></td>
+    </tr>
+</table>
 
-mysql文件
-
-
-#### APP预览
-
-**登录:**
-
-<img src='https://cdn.kyeteo.cn/tacomall/login.jpg' height='500px'>
-
-**个人中心:**
-
-<img src='https://cdn.kyeteo.cn/tacomall/center.jpg' height='500px'>
-
-**购物车:**
-
-<img src='https://cdn.kyeteo.cn/tacomall/cart.jpg' height='500px'>
-
-**详情:**
-
-<img src='https://cdn.kyeteo.cn/tacomall/goods.jpg' height='500px'>
-
-#### 软件架构
+### 代码描述
 
 ~~~
-tacomall-uniapp    根目录
-├─api                   与服务端对接
-├─common                项目公共目录，包括未编译之前的less,es6文件
-├─compoents             被页面公用的组件
-├─hybrid                混合页面，适用于编译成navtive app时嵌入的HTML网页
-├─libs                  js库，例如http请求库
-├─pages                 页面
-├─platforms             适用于编译不同平台的兼容代码
-├─plugins               Vue的插件库
-├─service               平台提供的服务，例如微信登陆服务
-├─static                静态目录，严禁将未编译的静态资源放入该目录
-├─store                 vuex状态管理
-├─utils                 js方法库
-├─App.vue               App启动
-├─config.js             App配置文件
-├─main.js               App编译入口
-├─manifest.json         App项目配置文件
-├─page.json             App页面配置
+tacomall-uniapp                     项目
+├─api                               接口模块
+├─common                            公共less,js
+├─hybrid                            H5页面
+├─libs                              js库
+├─model                             数据模型
+├─pages                             页面
+│  ├─account                        个人账号
+│  ├─cart                           购物车
+│  ├─category                       分类
+│  ├─center                         个人中心
+│  ├─checkout                       订单确认
+│  ├─evaluate                       商品评价
+│  ├─goods                          商品详情
+│  ├─h5                             webview页面
+│  ├─index                          首页
+│  ├─login                          登录
+│  ├─order                          订单列表
+│  ├─search                         搜索
+│  ├─transaction                    订单完成
+├─platforms                         跨平台页面，样式
+├─plugins                           vue插件
+├─service                           开放平台服务
+├─static                            静态资源
+├─store                             全局状态树
+├─utils                             工具库
+├─wxcomponents                      微信UI库
+├─App.vue                           vue根组件
+├─config.js                         全局配置
+├─main.js                           js入口
+├─manifest.json                     uniapp配置
 ~~~
 
+## 上手指南
 
-#### 安装教程
+我们希望开源的项目能够让每一个人都能够一看就懂，轻松上手，但这并不意味者我们不需要做任何东西，相反，在正式运行项目前，你必须完成以下步骤。
 
-1.  克隆项目
-2.  安装hbuilderx
-3.  导入项目
-4.  编译运行
+### 环境要求
 
-#### 使用说明
+为了避免运行开发中遇到一些意想不到的问题，我们推荐你安装如下环境。
 
-1.  项目允许进行商用
-2.  项目使用iconfont图标，如需针对图标库进行修改，请私信获取iconfont
+1. Git
+2. Node9+
+3. hbuilder
+4. 微信开发者工具
 
-#### 参与贡献
+### 安装步骤
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+通过以下步骤，你将很快看见项目运行起来了！
 
+1. 克隆项目
 
-#### 码云特技
+```
+git clone https://gitee.com/running-cat/tacomall-uniapp.git
+```
+2. 配置hbuilder
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+项目依赖于hbuilderx进行跨平台代码运行编译，在开发前，我们需要确保配置好hbuilder编辑器中的**Node路径**和**微信开发者工具路径和端口**
+
+3. 导入项目
+
+打开hbuilderx，选择导入该项目
+
+4. 更换微信小程序appid
+
+想要开发微信小程序，我们需要拥有属于自己的微信小程序appid。当然，我们可以通过微信小程序测试号获取。
+
+```
+manifest.json > mp-weixin > appid
+```
+
+## 测试
+
+看到这里，我们认为你已经正确配置启动项目了，接下来你将通过微信开发者工具看到实际效果。
+
+```
+运行 > 运行到小程序模拟器 > 微信小程序
+```
+
+## 部署
+
+我们提供了docker容器化部署方案，详情请查看[部署](https://gitee.com/running-cat/tacomall-springcloud/blob/master/LICENSE)，但并不意味着你不得不选择docker部署，你仍然可以自由选择你喜欢的部署方式进行部署。
+
+## 使用的框架
+
+项目中使用到以下框架（不限于）
+
+| 框架             | 说明                                                         |
+| -------------------- | ------------------------------------------------------------ |
+| vue              | 代码编写基础                      |
+| vuex        | 提供页面数据共享 |
+| uniapp    | 跨平台解决方案      |
+
+## 版本控制
+
+每个版本的发布我们将在[RELEASE.md](https://gitee.com/running-cat/tacomall-uniapp/blob/master/RELEASE.md)记录跟踪。
+
+## 版权声明
+
+项目在[Apache License 2.0](https://gitee.com/running-cat/tacomall-uniapp/blob/master/LICENSE)下自由使用。
+
+## 社区
+
+<table border="0">
+    <tr>
+        <td>关注“码上talk”微信公众号</td>
+        <td>tacomall QQ交流群</td>
+        <td>我的微信</td>
+    </tr>
+    <tr>
+        <td><img title="码上talk" src="http://img.codingtalk.cn/ncr3m3k1585147351285" height="200" width="200"/></td>
+        <td><img title="tacomall QQ交流群" src="http://img.codingtalk.cn/haPkJxc1585147447571" height="200" width="220"/></td>
+        <td><img title="码上talk|RC" src="http://img.codingtalk.cn/meJzskn1584540440273" height="200" width="220"/></td>
+    </tr>
+</table>
+
+<p>如果您觉得有帮助，请点右上角 "Star" 支持一下谢谢</p>
+
+<p>如果您对此项目感兴趣，请点右上角 "Star" 支持一下谢谢</p>
+
+<p>如果需要帮助请留言或者加微信，晚上20：00后统一回复解决</p>
