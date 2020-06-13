@@ -1,5 +1,14 @@
-import {appConfig} from '../config'
-import {token} from '../utils/token'
+/*
+ * @Author: 码上talk|RC
+ * @Date: 2020-06-09 23:20:26
+ * @LastEditTime: 2020-06-13 09:42:44
+ * @LastEditors: 码上talk|RC
+ * @Description: 
+ * @FilePath: \tacomall-uniapp\libs\request.js
+ * @Just do what I think it is right
+ */ 
+import { appConfig } from '../config'
+import { token } from '../utils/token'
 
 const send = (url, data = {}, method = 'POST', showLoading = true, base_url = '') => {
     uni.showLoading({
@@ -12,7 +21,9 @@ const send = (url, data = {}, method = 'POST', showLoading = true, base_url = ''
             data: data,
             header: (() => {
                 const tokeValue = token.get()
-                let config = {}
+                let config = {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
                 if (tokeValue) {
                     config[appConfig.tokenKey] = tokeValue
                 }

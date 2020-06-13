@@ -7,10 +7,10 @@
             <view class="w-form">
                 <view class="f-input">
                     <view class="i-item">
-                        <input type="text" placeholder="请输入手机号" v-model="form.mobile"/>
+                        <input type="text" placeholder="请输入手机号" v-model="form.mobile" />
                     </view>
                     <view class="i-item">
-                        <input type="password" placeholder="请输入验证码"/>
+                        <input type="password" placeholder="请输入验证码" />
                         <text class="btn btn-disable" v-if="time">{{time}}S后重发</text>
                         <text class="btn" v-else @tap="sendCode">获取验证码</text>
                     </view>
@@ -45,67 +45,74 @@
 </template>
 
 <script>
-    import {validate} from '../../utils/validate'
-    import {token} from '../../utils/token'
-    import {mapActions} from 'vuex'
-    export default {
-        data () {
-            return {
-                time: 0,
-                form: {
-                    mobile: '',
-                    code: ''
-                }
+import { validate } from "../../utils/validate";
+import { token } from "../../utils/token";
+import { mapActions } from "vuex";
+import { appConfig } from "../../config";
+export default {
+    data() {
+        return {
+            time: 0,
+            form: {
+                mobile: "",
+                code: ""
             }
+        };
+    },
+    methods: {
+        ...mapActions("user", ["getUserInfo"]),
+        sendCode() {
+            if (!this.form.mobile) {
+                this.toast("手机号必填");
+                return;
+            }
+            if (!validate.isMobile(this.form.mobile)) {
+                this.toast("手机号格式有误");
+                return;
+            }
+            let timer = null;
+            this.time = 60;
+            timer = setInterval(() => {
+                if (this.time === 0 && this.timer) {
+                    this.time = 60;
+                    timer = null;
+                    return;
+                }
+                this.time = this.time - 1;
+            }, 1000);
         },
-        methods: {
-            ...mapActions('user', ['synopsis']),
-            sendCode () {
-                if (!this.form.mobile) {
-                    this.toast('手机号必填')
-                    return
-                }
-                if (!validate.isMobile(this.form.mobile)) {
-                    this.toast('手机号格式有误')
-                    return
-                }
-                let timer = null
-                this.time = 60
-                timer = setInterval(() => {
-                    if (this.time === 0 && this.timer) {
-                        this.time = 60
-                        timer = null
-                        return
-                    }
-                    this.time = this.time - 1
-                }, 1000)
-            },
-            doWeixinLogin (o) {
-                if (!o.detail.iv) {
-                    return
-                }
-                uni.login({
-                    provider: 'weixin',
-                    success: res => {
-                        this.$api.user.miniAppLogin({
+        doWeixinLogin(o) {
+            if (!o.detail.iv) {
+                return;
+            }
+            uni.login({
+                provider: "weixin",
+                success: res => {
+                    console.log(o);
+                    this.$api.user
+                        .wxMaLogin({
                             iv: o.detail.iv,
                             code: res.code,
+                            appid: appConfig.wx.appid,
+                            rawData: o.detail.rawData,
+                            signature: o.detail.signature,
                             encryptedData: o.detail.encryptedData
-                        }).then(resp => {
-                            if (resp.ok) {
-                                token.set(resp.data)
-                                this.synopsis()
-                            } else {
-                                this.toast('服务器出小差啦')
-                            }
                         })
-                    }
-                })
-            }
+                        .then(resp => {
+                            if (resp.ok) {
+                                token.set(resp.data);
+                                this.getUserInfo();
+                            } else {
+                                this.toast("服务器出小差啦");
+                            }
+                        });
+                }
+            });
         }
     }
+};
 </script>
 
 <style lang="less">
-    @import "./index";
+@import "./index";
 </style>

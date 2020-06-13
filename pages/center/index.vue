@@ -1,3 +1,12 @@
+<!--
+ * @Author: 码上talk|RC
+ * @Date: 2020-06-09 23:20:26
+ * @LastEditTime: 2020-06-13 10:11:31
+ * @LastEditors: 码上talk|RC
+ * @Description: 
+ * @FilePath: \tacomall-uniapp\pages\center\index.vue
+ * @Just do what I think it is right
+--> 
 <template>
     <view class="page center">
         <view class="c-header">
@@ -5,13 +14,17 @@
                 <text class="iconfont">&#xe674;</text>
             </view>
         </view>
-        <view class="c-account c-account-is-login" @tap="nav('/pages/account/index')" v-if="isLogin">
+        <view
+            class="c-account c-account-is-login"
+            @tap="nav('/pages/account/index')"
+            v-if="isLogin"
+        >
             <view class="a-left">
                 <view class="l-avatar">
-                    <img :src="synopsis.userProfile.avatar" alt="">
+                    <img :src="userInfo.avatar" alt />
                 </view>
                 <view class="l-name">
-                    <text>{{synopsis.userProfile.nickname}}</text>
+                    <text>{{userInfo.nickname}}</text>
                 </view>
             </view>
             <view class="a-right">
@@ -21,7 +34,7 @@
         <view class="c-account c-account-no-login" @tap="nav('/pages/login/index')" v-else>
             <view class="a-left">
                 <view class="l-avatar">
-                    <img src="https://m.mi.com/static/img/avatar.76a75b8f17.png" alt="">
+                    <img src="https://m.mi.com/static/img/avatar.76a75b8f17.png" alt />
                 </view>
                 <view class="l-name">
                     <text>请登录</text>
@@ -106,15 +119,17 @@
 </template>
 
 <script>
-    import {mapState} from 'vuex'
-    export default {
-        computed: {
-            ...mapState(['isLogin']),
-            ...mapState('user', ['synopsis'])
-        }
+import { mapState } from "vuex";
+export default {
+    computed: {
+        ...mapState(["isLogin"]),
+        ...mapState("user", {
+            userInfo: "info"
+        })
     }
+};
 </script>
 
 <style lang="less">
-    @import "./index";
+@import "./index";
 </style>
