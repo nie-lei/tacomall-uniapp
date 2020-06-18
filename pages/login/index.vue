@@ -88,7 +88,6 @@ export default {
             uni.login({
                 provider: "weixin",
                 success: res => {
-                    console.log(o);
                     this.$api.user
                         .wxMaLogin({
                             iv: o.detail.iv,
@@ -99,9 +98,11 @@ export default {
                             encryptedData: o.detail.encryptedData
                         })
                         .then(resp => {
-                            if (resp.ok) {
+                            if (resp.status) {
                                 token.set(resp.data);
-                                this.getUserInfo();
+                                this.getUserInfo().then( () => {
+                                    this.swi('/pages/index/index')
+                                });
                             } else {
                                 this.toast("服务器出小差啦");
                             }

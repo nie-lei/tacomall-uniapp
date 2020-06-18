@@ -17,7 +17,12 @@ Vue.mixin({
                 delta: 1
             })
         },
-        toast (s) {
+        swi: (url) => {
+            uni.switchTab({
+                url: url
+            })
+        },
+        toast(s) {
             uni.showToast({
                 title: s,
                 icon: 'none',
