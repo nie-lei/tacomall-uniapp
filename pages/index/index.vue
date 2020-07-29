@@ -27,14 +27,9 @@
         </view>
         <view class="i-banner">
             <swiper class="b-swiper" :indicator-dots="true" :autoplay="true" interval="2000" duration="3000">
-                <swiper-item>
+                <swiper-item :key="key" v-for="(item, key) in pageInfo.activity">
                     <view class="s-item">
                         <image src="https://yanxuan.nosdn.127.net/456abfb6e481a941444e8840005c88ed.jpg?imageView&quality=75&thumbnail=750x0"></image>
-                    </view>
-                </swiper-item>
-                <swiper-item>
-                    <view class="s-item">
-                        <image src="https://yanxuan.nosdn.127.net/fa1bee937627b5b554d2021906115031.jpg?imageView&quality=75&thumbnail=750x0"></image>
                     </view>
                 </swiper-item>
             </swiper>
@@ -140,7 +135,28 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+       data () {
+           return {
+                pageInfo: {
+                    activity: []
+                }
+           }
+       },
+       methods: {
+           init () {
+               this.$api.page.info({page: 'index'}).then(res => {
+                   const {status, data} = res
+                   if (status) {
+                       this.pageInfo.activity = data.activity
+                   }
+               })
+           }
+       },
+       onLoad () {
+           this.init()
+       } 
+    }
 </script>
 
 <style lang="less">
